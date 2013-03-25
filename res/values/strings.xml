@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">Drive Utility</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Peak Drive</string>
+    <string name="auth_notification_title_account">Account Authorization title</string>
+    <string name="auth_notification_text_account">Account Authorization text</string>
+    <string name="auth_notification_title">Authorization title</string>
+    <string name="auth_notification_text">Authorization text</string>
+
+</resources>

@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_account"
+        android:icon="@drawable/ic_menu_account"
+        android:showAsAction="always"
+        android:title="Drive Account"/>
+    <item
+        android:id="@+id/menu_download"
+        android:icon="@drawable/ic_menu_download"
+        android:showAsAction="always"
+        android:title="Drive Download"/>
+    <item
+        android:id="@+id/menu_upload"
+        android:icon="@drawable/ic_menu_upload"
+        android:showAsAction="always"
+        android:title="Drive Upload"/>
+    <item
+        android:id="@+id/menu_delete"
+        android:icon="@drawable/ic_menu_delete"
+        android:showAsAction="always"
+        android:title="Delete All"/>
+    <item
+        android:id="@+id/menu_add"
+        android:icon="@drawable/ic_menu_add"
+        android:showAsAction="always"
+        android:title="Add All"/>
+
+</menu>
