@@ -93,15 +93,10 @@ public class Database_DataSource_News {
 
   public void setArticles(List<Article> newArticles) {
 	  open();
-	  List <Article> articles = getAllArticle(); 
-	  
-	  for (Article article : articles){ 
-		  database.delete(Database_News.TABLE_NEWS, Database_News.COLUMN_ID + " = " + article.getId(), null);
-	  }
-	  
+	  deleteAllArticles();
 	  for (Article article : newArticles){ 
 		  createArticle(article.getTitle(), article.getSumm());
-	  }
-	  close();
+	  } 
+	 close();
   }
 } 

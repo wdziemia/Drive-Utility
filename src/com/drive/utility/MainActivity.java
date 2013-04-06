@@ -93,7 +93,7 @@ public class MainActivity extends Activity {
 	}
 
 	private void saveFileToDrive(final File file) {
-	    Thread t = new Thread(new Runnable() {
+	    new Thread(new Runnable() {
 	    	
 	    	@Override
 	    	public void run() {
@@ -114,8 +114,7 @@ public class MainActivity extends Activity {
 	    			e.printStackTrace();
 	    		}
 	    	}
-    	});
-	    t.start();
+    	}).start();
 	}
 	
 	private void getFileFromDrive(final File file) {
@@ -160,7 +159,7 @@ public class MainActivity extends Activity {
 	
 	private void performDriveFunction(final int driveFunctionType) {
 
-		Thread t = new Thread(new Runnable() {
+		new Thread(new Runnable() {
 	    	
 	    	@Override
 	    	public void run() {
@@ -174,7 +173,6 @@ public class MainActivity extends Activity {
 	    					service.files().delete(gFile.getId()).execute();
 	    				}
 	    			}
-	    			
 	    			switch (driveFunctionType) {
 		    			case REQUEST_DRIVE_UPLOAD :
 		    				saveFileToDrive(file);
@@ -191,8 +189,7 @@ public class MainActivity extends Activity {
 	    			e.printStackTrace();
 	    		}
 	    	}
-		});
-		 t.start();
+		}).start();
 	}
 	
 	private Drive getDriveService(GoogleAccountCredential credential) {
@@ -201,12 +198,12 @@ public class MainActivity extends Activity {
 	}
 
 	public void showToast(final String toast) {
-		runOnUiThread(new Runnable() {
+		runOnUiThread(new Runnable(){
 			@Override
 			public void run() {
 				Toast.makeText(getApplicationContext(), toast, Toast.LENGTH_SHORT).show();
 			}
-	    });
+		});
 	}
 	
 	@Override
